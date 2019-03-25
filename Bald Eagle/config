@@ -1,0 +1,28 @@
+;=====================================================
+;     File Includes
+;=====================================================
+
+[section/base]
+include-file = /home/fabian/.config/polybar/master.conf
+include-file = /home/fabian/.config/polybar/modules.conf
+
+
+;=====================================================
+;     Openbox Bars
+;=====================================================
+
+[bar/openbox-bar]
+inherit = bar/master
+
+
+
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor =
+
+modules-left   = jgmenu workspaces
+modules-center =
+modules-right  = pacman-updates volume memory temperature coreuse network-icon wired-network network battery retard-clock spacer
+
+
+
