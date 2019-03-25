@@ -1,0 +1,87 @@
+#==============================================================================
+#                               conkyrc_seamod
+# Date    : 05/02/2012
+# Author  : SeaJey
+# Version : v0.1
+# License : Distributed under the terms of GNU GPL version 2 or later
+#
+# This version is a modification of conkyrc_lunatico wich is modification of conkyrc_orange
+#
+# conkyrc_orange:    http://gnome-look.org/content/show.php?content=137503&forumpage=0
+# conkyrc_lunatico:  http://gnome-look.org/content/show.php?content=142884
+#==============================================================================
+
+background yes
+update_interval 1
+
+cpu_avg_samples 1
+net_avg_samples 2
+temperature_unit celsius
+
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+
+gap_y 670
+gap_x 540
+
+
+minimum_size 300 100
+#maximum_width 500
+
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_visual no
+own_window_colour 000000
+own_window_argb_value 0
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+
+border_inner_margin 0
+border_outer_margin 0
+alignment top_right
+
+
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+override_utf8_locale yes
+use_xft yes
+xftfont caviar dreams:size=10
+xftalpha 0.5
+uppercase no
+
+# Defining colors
+default_color FFFFFF
+# Shades of Gray
+color1 DDDDDD
+color2 AAAAAA
+color3 888888
+# Orange
+color4 36EF55
+# Green
+color5 EF3E36
+
+
+## System information using conky capabilities
+
+# Header with base system info
+own_window_argb_value 0
+own_window_colour 000000
+TEXT
+
+# Showing disk partitions: root, home and Data
+${voffset 28}
+${offset 110}${font Ubuntu:size=11}${color4}KINGSTON SA400S37120G
+${color2}${offset 0}${hr 1}
+${offset 100}${diskiograph 33,183 888888 EF3E36 }${voffset -30}
+${voffset 15}
+${offset 110}${font Ubuntu:size=9}${color1}Free: ${font Ubuntu:size=9}${fs_free /}${alignr}${font Ubuntu:size=9}Used: ${font Ubuntu:size=9}${fs_used /}
+
+
+
+
+
